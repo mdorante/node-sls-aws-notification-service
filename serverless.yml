@@ -11,12 +11,15 @@ provider:
   memorySize: 256
   region: ${opt:region, 'us-east-1'}
   stage: ${opt:stage, 'dev'}
+  environment:
+    REGION: ${self:provider.region}
+    EMAIL: ${file(email.txt)}
+  iamRoleStatements:
+    - ${file(iam/LambdaRoles.yml):SendMail}
   tags:
     Owner: serverless_node_aws_user
   stackTags:
     Owner: serverless_node_aws_user
-  iamRoleStatements:
-    - ${file(iam/LambdaRoles.yml):SendMail}
 
 functions:
   sendMail:
