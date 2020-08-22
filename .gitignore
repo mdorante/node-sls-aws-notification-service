@@ -7,3 +7,6 @@ jspm_packages
 
 # Webpack directories
 .webpack
+
+# Email file (only contains the verified SES email
+email.txt
