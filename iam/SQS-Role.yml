@@ -1,4 +1,4 @@
-SQSRole:
+ReceiveMessage:
   Effect: Allow
   Action:
     - sqs:ReceiveMessage

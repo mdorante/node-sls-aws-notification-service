@@ -15,7 +15,8 @@ provider:
     REGION: ${self:provider.region}
     EMAIL: ${file(email.txt)}
   iamRoleStatements:
-    - ${file(iam/LambdaRoles.yml):SendMail}
+    - ${file(iam/SES-Role.yml):SendMail}
+    - ${file(iam/SQS-Role.yml):ReceiveMessage}
   tags:
     Owner: serverless_node_aws_user
   stackTags:
