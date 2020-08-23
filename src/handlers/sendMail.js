@@ -4,18 +4,23 @@ const ses = new AWS.SES({ region: process.env.REGION });
 const sesEmailAddress = process.env.EMAIL;
 
 async function sendMail(event, context) {
+  const record = event.Records[0];
+
+  const email = JSON.parse(record.body);
+  const { subject, body, recipient } = email;
+
   const params = {
     Source: sesEmailAddress,
     Destination: {
-      ToAddresses: ["mdorante10@gmail.com"],
+      ToAddresses: [recipient],
     },
     Message: {
       Subject: {
-        Data: "Test SES",
+        Data: subject,
       },
       Body: {
         Text: {
-          Data: "Hello from SES!",
+          Data: body,
         },
       },
     },
