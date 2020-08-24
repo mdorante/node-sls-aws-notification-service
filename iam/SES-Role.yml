@@ -2,4 +2,4 @@ SendMail:
   Effect: Allow
   Action:
     - ses:SendEmail
-  Resource: arn:aws:ses:#{AWS::Region}:#{AWS::AccountId}:identity/${file(email.txt)}
+  Resource: arn:aws:ses:*
