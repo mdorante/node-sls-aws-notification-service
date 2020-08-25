@@ -1,5 +1,5 @@
 #!/bin/bash
-# Create email.text file with the verified email for SES
+# Create email.txt file with the verified email for SES
 
 EMAIL=$1
 
