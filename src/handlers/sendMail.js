@@ -1,6 +1,6 @@
-import AWS from "aws-sdk";
+import { SES } from "aws-sdk";
 
-const ses = new AWS.SES({ region: process.env.REGION });
+const ses = new SES({ region: process.env.REGION });
 const sesEmailAddress = process.env.EMAIL;
 
 async function sendMail(event, context) {
