@@ -6,7 +6,6 @@ You will need:
 
 - An AWS account
 - Node v12.x
-- Serverless SDK
 
 ## Getting started
 
