@@ -2,12 +2,14 @@
 
 An email notification service for Serverless apps.
 
+You can try it out following the steps from the "Setup" section below.
+
 You will need:
 
 - An AWS account
 - Node v12.x
 
-## Getting started
+## Setup
 
 ### 1. Generate a Serverless project or clone this repo
 
@@ -40,4 +42,10 @@ The Source email is the email address you want to send emails from (it must be a
 sls deploy -v
 ```
 
-You are ready to go!
+## Teardown
+
+When you are down checking the app out, you can remove all AWS resources in just one step:
+
+```
+sls remove -v
+```
