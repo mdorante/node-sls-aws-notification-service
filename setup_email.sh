@@ -1,5 +1,5 @@
 #!/bin/bash
-# Sets up project with all necessary files, and dependency installation
+# Create email.text file with the verified email for SES
 
 EMAIL=$1
 
