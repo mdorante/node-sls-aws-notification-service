@@ -1,6 +1,6 @@
 # node-sls-aws-notification-service
 
-A notification service for Serverless apps.
+An email notification service for Serverless apps.
 
 You will need:
 
@@ -27,7 +27,15 @@ cd notification-service
 npm install
 ```
 
-### 3. Deploy the stack
+### 3. Set up the Source email for SES
+
+The Source email is the email address you want to send emails from (it must be a verified SES email address).
+
+```
+./setup_email.sh <your email address>
+```
+
+### 4. Deploy the stack
 
 ```
 sls deploy -v
